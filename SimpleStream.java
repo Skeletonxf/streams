@@ -1,7 +1,5 @@
 package com.example.myapplication.stream;
 
-import com.example.myapplication.R;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,7 +29,7 @@ class SimpleStream<T> implements Stream<T> {
     }
 
     @Override
-    public Stream<R> map(Function<T, R> mappingFunction) {
+    public <R> Stream<R> map(Function<T, R> mappingFunction) {
         List<R> mappedData = new ArrayList<>();
         for (T element : data) {
             mappedData.add(mappingFunction.apply(element));
@@ -47,7 +45,7 @@ class SimpleStream<T> implements Stream<T> {
     }
 
     @Override
-    public R collect(Collector<T, R> collector) {
+    public <R> R collect(Collector<T, R> collector) {
         return collector.collect(this);
     }
 }
