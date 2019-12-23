@@ -26,8 +26,8 @@ The only syntax difference on the consuming code side is needing to use `Stream.
 
 ## Non goals
 
-Coverage: I have implemented only what methods I frequentely use: `filter`, `map`, `forEach` and `collect`. Aside from a few other additions like `reduce`, or collecting into Maps that might be useful in the future, I have no plans to add much more functionality. [There may already be more complete backports that may be more useful to you if you desire more functionality](https://stackoverflow.com/questions/39515035/is-it-possible-to-use-the-java-8-stream-api-on-android-api-24).
+Coverage: I have implemented only what methods I frequentely use: `filter`, `map`, `forEach` and `collect`. Aside from a few other additions like `reduce`, or collecting into Maps that might be useful in the future, I have no plans to add more functionality. [There may already be more complete backports that may be more useful to you if you desire more functionality](https://stackoverflow.com/questions/39515035/is-it-possible-to-use-the-java-8-stream-api-on-android-api-24).
 
-Performance: I created these classes to help with writing data structure manipulating code in the same way I would in desktop Java. Internally everything is implemented by iterating through an ArrayList and as a result is probably slightly slower and uses more memory than manipulating your datastructures procedurally.
+Performance: I created these classes to help with writing data structure manipulating code in the same way I would in desktop Java. Internally everything is implemented by iterating through an ArrayList and as a result is probably slightly slower and uses more memory than using plain `for` loops.
 
 Streaming: This library does not actually perform stream processing. It is not lazy, it holds the entire datastructure in memory rather than streaming and does not support any parallel processing.
