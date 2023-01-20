@@ -1,6 +1,6 @@
 # Streams
 
-An extremely and deliberately incomplete Java Stream library mirroring the public interfaces of the Java 8 standard library stream classes. This is primarily intended for Android development where a full reimplementation of the Stream library would be overkill or is otherwise infeasible (ie using the Android Stream library requires a minimum SKD of 24 which will exclude many Android devices still in use).
+An extremely and deliberately incomplete Java Stream library mirroring the public interfaces of the Java 8 standard library stream classes. This is primarily intended for Android development where a full reimplementation of the Stream library would be overkill or is otherwise infeasible (ie using the Android Stream library requires a minimum SDK of 24 which will exclude many Android devices still in use).
 
 ## Usage
 
